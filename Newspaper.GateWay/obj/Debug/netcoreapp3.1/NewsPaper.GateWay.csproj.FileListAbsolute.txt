@@ -59,5 +59,3 @@ G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netc
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.csproj.CoreCompileInputs.cache
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.MvcApplicationPartsAssemblyInfo.cache

@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
-using NewsPaper.Gateway.ConfigureServices;
+using NewsPaper.MassTransit.Configuration;
 
 namespace NewsPaper.Gateway
 {
@@ -41,8 +41,13 @@ namespace NewsPaper.Gateway
                     config.Audience = "https://localhost:10001";
                 });
 
-            ConfigureServicesMassTransit.ConfigureServices(services, Configuration);
-
+            var section = Configuration.GetSection("MassTransit");
+            ConfigureServicesMassTransit.ConfigureServices(services, Configuration, new MassTransitConfiguration()
+            {
+                IsDebug = section.GetValue<bool>("IsDebug"),
+                ServiceName = "Gateway"
+            });
+            //services.AddControllers();
             services.AddControllersWithViews();
         }
 

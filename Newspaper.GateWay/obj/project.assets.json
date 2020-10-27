@@ -118,16 +118,40 @@
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
-      "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
+      "Microsoft.Extensions.Configuration/3.1.9": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Extensions.Primitives": "3.1.5"
+          "Microsoft.Extensions.Configuration.Abstractions": "3.1.9"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Abstractions/3.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "3.1.9"
         },
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll": {}
+        }
+      },
+      "Microsoft.Extensions.Configuration.Binder/3.1.9": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Extensions.Configuration": "3.1.9"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll": {}
         }
       },
       "Microsoft.Extensions.DependencyInjection/3.1.5": {
@@ -223,7 +247,7 @@
           "lib/netcoreapp3.1/Microsoft.Extensions.Options.dll": {}
         }
       },
-      "Microsoft.Extensions.Primitives/3.1.5": {
+      "Microsoft.Extensions.Primitives/3.1.9": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.dll": {}
@@ -380,6 +404,22 @@
         },
         "runtime": {
           "lib/netstandard2.0/NewId.dll": {}
+        }
+      },
+      "NewsPaper.MassTransit.Configuration/1.0.1": {
+        "type": "package",
+        "dependencies": {
+          "MassTransit": "7.0.6",
+          "MassTransit.AspNetCore": "7.0.6",
+          "MassTransit.Extensions.DependencyInjection": "7.0.6",
+          "MassTransit.RabbitMQ": "7.0.6",
+          "Microsoft.Extensions.Configuration.Binder": "3.1.9"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
       "Newtonsoft.Json/11.0.2": {
@@ -1686,10 +1726,26 @@
         "version.txt"
       ]
     },
-    "Microsoft.Extensions.Configuration.Abstractions/3.1.5": {
-      "sha512": "VBcAk6s9izZr04WCzNqOh1Sxz2RbVSh0G79MfpHSDv16cUJtSEYEHody9ZnF71LBEktzdu6cvDFBOFMh43q0iA==",
+    "Microsoft.Extensions.Configuration/3.1.9": {
+      "sha512": "lqdkOGNeTMKG981Q7yWGlRiFbIlsRwTlMMiybT+WOzUCFBS/wc25tZgh7Wm/uRoBbWefgvokzmnea7ZjmFedmA==",
       "type": "package",
-      "path": "microsoft.extensions.configuration.abstractions/3.1.5",
+      "path": "microsoft.extensions.configuration/3.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.xml",
+        "microsoft.extensions.configuration.3.1.9.nupkg.sha512",
+        "microsoft.extensions.configuration.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Abstractions/3.1.9": {
+      "sha512": "vOJxPKczaHpXeZFrxARxYwsEulhEouXc5aZGgMdkhV/iEXX9/pfjqKk76rTG+4CsJjHV+G/4eMhvOIaQMHENNA==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.abstractions/3.1.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1698,8 +1754,24 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.xml",
-        "microsoft.extensions.configuration.abstractions.3.1.5.nupkg.sha512",
+        "microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",
         "microsoft.extensions.configuration.abstractions.nuspec"
+      ]
+    },
+    "Microsoft.Extensions.Configuration.Binder/3.1.9": {
+      "sha512": "BG6HcT7tARYakftqfQu+cLksgIWG1NdxMY+igI12hdZrUK+WjS973NiRyuao/U9yyTeM9NPwRnC61hCmG3G3jg==",
+      "type": "package",
+      "path": "microsoft.extensions.configuration.binder/3.1.9",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.xml",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.dll",
+        "lib/netstandard2.0/Microsoft.Extensions.Configuration.Binder.xml",
+        "microsoft.extensions.configuration.binder.3.1.9.nupkg.sha512",
+        "microsoft.extensions.configuration.binder.nuspec"
       ]
     },
     "Microsoft.Extensions.DependencyInjection/3.1.5": {
@@ -1830,10 +1902,10 @@
         "microsoft.extensions.options.nuspec"
       ]
     },
-    "Microsoft.Extensions.Primitives/3.1.5": {
-      "sha512": "6bLdjSAQix82oP2tsuX9MM2yjgUFFOkSZYyRSKoUULilw2cg0Y0H+dnugwYlfj8Jd7yjd/+QSdNBqEyYhTYv0w==",
+    "Microsoft.Extensions.Primitives/3.1.9": {
+      "sha512": "IrHecH0eGG7/XoeEtv++oLg/sJHRNyeCqlA9RhAo6ig4GpOTjtDr32sBMYuuLtUq8ALahneWkrOzoBAwJ4L4iA==",
       "type": "package",
-      "path": "microsoft.extensions.primitives/3.1.5",
+      "path": "microsoft.extensions.primitives/3.1.9",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1842,7 +1914,7 @@
         "lib/netcoreapp3.1/Microsoft.Extensions.Primitives.xml",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll",
         "lib/netstandard2.0/Microsoft.Extensions.Primitives.xml",
-        "microsoft.extensions.primitives.3.1.5.nupkg.sha512",
+        "microsoft.extensions.primitives.3.1.9.nupkg.sha512",
         "microsoft.extensions.primitives.nuspec"
       ]
     },
@@ -2045,6 +2117,17 @@
         "lib/netstandard2.0/NewId.xml",
         "newid.3.0.2.nupkg.sha512",
         "newid.nuspec"
+      ]
+    },
+    "NewsPaper.MassTransit.Configuration/1.0.1": {
+      "sha512": "dG8zj64OzLmnl0NQJzX9qAZsmA4cUwqf2nZGVMwhbKLXEiHpudWNsCcoNGBRalhhSg1DN9YcWWpia6rTi4NR9Q==",
+      "type": "package",
+      "path": "newspaper.masstransit.configuration/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll",
+        "newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
+        "newspaper.masstransit.configuration.nuspec"
       ]
     },
     "Newtonsoft.Json/11.0.2": {
@@ -5561,7 +5644,8 @@
       "MassTransit.AspNetCore >= 7.0.6",
       "MassTransit.Extensions.DependencyInjection >= 7.0.6",
       "MassTransit.RabbitMQ >= 7.0.6",
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9"
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9",
+      "NewsPaper.MassTransit.Configuration >= 1.0.1"
     ]
   },
   "packageFolders": {
@@ -5585,6 +5669,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "G:\\Repo\\Local_Nuget": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -5620,6 +5705,10 @@
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[3.1.9, )"
+          },
+          "NewsPaper.MassTransit.Configuration": {
+            "target": "Package",
+            "version": "[1.0.1, )"
           }
         },
         "imports": [

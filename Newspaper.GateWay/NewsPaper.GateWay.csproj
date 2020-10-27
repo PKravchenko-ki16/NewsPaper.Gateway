@@ -10,6 +10,7 @@
     <PackageReference Include="MassTransit.Extensions.DependencyInjection" Version="7.0.6" />
     <PackageReference Include="MassTransit.RabbitMQ" Version="7.0.6" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.9" />
+    <PackageReference Include="NewsPaper.MassTransit.Configuration" Version="1.0.1" />
   </ItemGroup>
 
 </Project>
