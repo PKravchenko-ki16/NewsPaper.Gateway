@@ -4,14 +4,14 @@
     "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj": {}
   },
   "projects": {
-    "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj": {
+    "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\Newspaper.GateWay.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
-        "projectName": "NewsPaper.GateWay",
-        "projectPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
+        "projectUniqueName": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\Newspaper.GateWay.ViewModels.csproj",
+        "projectName": "Newspaper.GateWay.ViewModels",
+        "projectPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\Newspaper.GateWay.ViewModels.csproj",
         "packagesPath": "C:\\Users\\KrokoR\\.nuget\\packages\\",
-        "outputPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\obj\\",
+        "outputPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\KrokoR\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,7 +38,72 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
+        "projectName": "NewsPaper.GateWay",
+        "projectPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
+        "packagesPath": "C:\\Users\\KrokoR\\.nuget\\packages\\",
+        "outputPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\KrokoR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "G:\\Repo\\Local_Nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\Newspaper.GateWay.ViewModels.csproj": {
+                "projectPath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay.ViewModels\\Newspaper.GateWay.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[10.1.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            },
             "MassTransit": {
               "target": "Package",
               "version": "[7.0.6, )"
@@ -62,6 +127,10 @@
             "NewsPaper.MassTransit.Configuration": {
               "target": "Package",
               "version": "[1.0.1, )"
+            },
+            "NewsPaper.MassTransit.Contracts": {
+              "target": "Package",
+              "version": "[1.0.0, )"
             }
           },
           "imports": [

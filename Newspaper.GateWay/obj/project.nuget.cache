@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "O6YGl3+aYT9ax0RBKm7/NN2mDsqeoG/xqXV3V9mOnaYAwNkeVxDHPqWSDTOfW/TTXKzzvUuGv/358GZtAGk1tg==",
+  "dgSpecHash": "AYRllB1hOXRxElf5JUfmciH1VZ+p5ZKcuUc62QO0qetK4IcIVYFJeyOyDW6kkHgw4gf5Ty6LXsilwtAqjbllLQ==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\KrokoR\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.0\\automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\automatonymous\\5.0.2\\automatonymous.5.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\greenpipes\\4.0.0\\greenpipes.4.0.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\masstransit\\7.0.6\\masstransit.7.0.6.nupkg.sha512",
@@ -12,6 +14,7 @@
     "C:\\Users\\KrokoR\\.nuget\\packages\\masstransit.rabbitmq\\7.0.6\\masstransit.rabbitmq.7.0.6.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.9\\microsoft.aspnetcore.authentication.jwtbearer.3.1.9.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.9\\microsoft.extensions.configuration.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.9\\microsoft.extensions.configuration.binder.3.1.9.nupkg.sha512",
@@ -35,6 +38,7 @@
     "C:\\Users\\KrokoR\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newid\\3.0.2\\newid.3.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.configuration\\1.0.1\\newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.contracts\\1.0.0\\newspaper.masstransit.contracts.1.0.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",

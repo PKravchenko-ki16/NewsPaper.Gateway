@@ -59,3 +59,8 @@ G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netc
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.Abstractions.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Options.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Primitives.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Configuration.Binder.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Configuration.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Contracts.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\AutoMapper.dll
