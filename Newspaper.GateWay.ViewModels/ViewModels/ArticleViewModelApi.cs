@@ -1,8 +1,9 @@
 ﻿using System;
+using Newspaper.GateWay.ViewModels.ViewModels.Base;
 
 namespace Newspaper.GateWay.ViewModels.ViewModels
 {
-    public class ArticleViewModelApi
+    public class ArticleViewModelApi : ViewModelBase
     {
         public string Title { get; set; }
 
@@ -16,7 +17,7 @@ namespace Newspaper.GateWay.ViewModels.ViewModels
 
         public string NikeNameAuthor { get; set; }
 
-        public string EditorNikeName { get; set; }
+        //public string EditorNikeName { get; set; }
 
         public DateTime DateOfRevision { get; set; }
     }

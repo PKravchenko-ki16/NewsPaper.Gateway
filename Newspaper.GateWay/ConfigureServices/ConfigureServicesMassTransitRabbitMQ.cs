@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NewsPaper.MassTransit.Configuration;
+using NewsPaper.MassTransit.Contracts.DTO.Requests;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
 namespace NewsPaper.Gateway.ConfigureServices
@@ -13,7 +14,8 @@ namespace NewsPaper.Gateway.ConfigureServices
             ConfigureServicesMassTransit.ConfigureServices(services, configuration, new MassTransitConfiguration()
             {
                 IsDebug = section.GetValue<bool>("IsDebug"),
-                ServiceName = "Gateway"
+                ServiceName = "Gateway",
+                Configurator = busMassTransit => { busMassTransit.AddRequestClient<ArticlesByIdAuthorRequestDto>(); }
             });
         }
     }

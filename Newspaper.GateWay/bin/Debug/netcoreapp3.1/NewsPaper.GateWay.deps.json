@@ -25,13 +25,15 @@
       "NewsPaper.GateWay/1.0.0": {
         "dependencies": {
           "AutoMapper": "10.1.1",
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "8.1.0",
           "MassTransit": "7.0.6",
           "MassTransit.AspNetCore": "7.0.6",
           "MassTransit.Extensions.DependencyInjection": "7.0.6",
           "MassTransit.RabbitMQ": "7.0.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.9",
           "NewsPaper.MassTransit.Configuration": "1.0.1",
-          "NewsPaper.MassTransit.Contracts": "1.0.0",
+          "NewsPaper.MassTransit.Contracts": "1.0.1",
+          "Newspaper.GateWay.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -321,6 +323,22 @@
         },
         "compile": {
           "lib/netstandard2.0/AutoMapper.dll": {}
+        }
+      },
+      "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+        "dependencies": {
+          "AutoMapper": "10.1.1",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "3.1.5",
+          "Microsoft.Extensions.Options": "3.1.5"
+        },
+        "runtime": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {
+            "assemblyVersion": "8.0.0.0",
+            "fileVersion": "8.1.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll": {}
         }
       },
       "Automatonymous/5.0.2": {
@@ -774,11 +792,11 @@
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
-      "NewsPaper.MassTransit.Contracts/1.0.0": {
+      "NewsPaper.MassTransit.Contracts/1.0.1": {
         "runtime": {
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.1.0",
+            "fileVersion": "1.0.1.0"
           }
         },
         "compile": {
@@ -1448,6 +1466,14 @@
           "System.Text.Encoding": "4.3.0",
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.1"
+        }
+      },
+      "Newspaper.GateWay.ViewModels/1.0.0": {
+        "runtime": {
+          "Newspaper.GateWay.ViewModels.dll": {}
+        },
+        "compile": {
+          "Newspaper.GateWay.ViewModels.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -3073,6 +3099,13 @@
       "path": "automapper/10.1.1",
       "hashPath": "automapper.10.1.1.nupkg.sha512"
     },
+    "AutoMapper.Extensions.Microsoft.DependencyInjection/8.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dQyGCAYcHbGuimVvCMu4Ea2S1oYOlgO9XfVdClmY5wgygJMZoS57emPzH0qNfknmtzMm4QbDO9i237W5IDjU1A==",
+      "path": "automapper.extensions.microsoft.dependencyinjection/8.1.0",
+      "hashPath": "automapper.extensions.microsoft.dependencyinjection.8.1.0.nupkg.sha512"
+    },
     "Automatonymous/5.0.2": {
       "type": "package",
       "serviceable": true,
@@ -3297,12 +3330,12 @@
       "path": "newspaper.masstransit.configuration/1.0.1",
       "hashPath": "newspaper.masstransit.configuration.1.0.1.nupkg.sha512"
     },
-    "NewsPaper.MassTransit.Contracts/1.0.0": {
+    "NewsPaper.MassTransit.Contracts/1.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Wvomdz2w/yZp8SPu1Abu/n77e8eBNc9GO7zxVaAwuZMPqcOWlPHvGbQaiaOUcDV4blv9jSLWXlFyWtVKg05kig==",
-      "path": "newspaper.masstransit.contracts/1.0.0",
-      "hashPath": "newspaper.masstransit.contracts.1.0.0.nupkg.sha512"
+      "sha512": "sha512-uMmC0fJMSOWoG7r2YxtcCYZ1PeMjULsDMDFGom6W4T9hUUH5G0yJ8TS54fCDBK9zGE8nkdndbh68R9HDk3/sCg==",
+      "path": "newspaper.masstransit.contracts/1.0.1",
+      "hashPath": "newspaper.masstransit.contracts.1.0.1.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",
@@ -3849,6 +3882,11 @@
       "sha512": "sha512-5zJ0XDxAIg8iy+t4aMnQAu0MqVbqyvfoUVl1yDV61xdo3Vth45oA2FoY4pPkxYAH5f8ixpmTqXeEIya95x0aCQ==",
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Newspaper.GateWay.ViewModels/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
       "type": "referenceassembly",

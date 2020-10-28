@@ -64,3 +64,8 @@ G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netc
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Configuration.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.MassTransit.Contracts.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\AutoMapper.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Newspaper.GateWay.ViewModels.dll
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Newspaper.GateWay.ViewModels.pdb
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.csproj.CoreCompileInputs.cache
+G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.MvcApplicationPartsAssemblyInfo.cache

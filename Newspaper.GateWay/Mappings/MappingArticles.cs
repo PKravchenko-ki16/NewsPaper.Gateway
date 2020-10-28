@@ -1,12 +1,12 @@
 ﻿using Newspaper.GateWay.ViewModels.ViewModels;
 using NewsPaper.Gateway.Mappings.Base;
-using NewsPaper.MassTransit.Contracts.DTO;
+using NewsPaper.MassTransit.Contracts.DTO.Models;
 
 namespace NewsPaper.Gateway.Mappings
 {
-    public class MappingArticles : MapperConfigurationBase
+    public class MappingArticlesDto : MapperConfigurationBase
     {
-        public MappingArticles()
+        public MappingArticlesDto()
         {
             CreateMap<ArticlesDto, ArticleViewModelApi>();
         }
