@@ -6,8 +6,9 @@ using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newspaper.GateWay.ViewModels.ViewModels;
-using NewsPaper.MassTransit.Contracts.DTO.Requests;
-using NewsPaper.MassTransit.Contracts.DTO.Responses;
+using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
 
 namespace NewsPaper.GateWay.Controllers
 {
@@ -25,14 +26,25 @@ namespace NewsPaper.GateWay.Controllers
 
         [Authorize]
         [HttpGet("getarticlesbyauthor")]
-        public async Task<ActionResult> GetArticlesByAuthor(Guid authorGuid)
+        public async Task<IActionResult> GetArticlesByAuthor(Guid authorGuid)
         {
-            var articles = await _requestClient.GetResponse<ArticlesResponseDto>(new ArticlesByIdAuthorRequestDto
+            var (statusResponse, notFoundResponse) =
+                await _requestClient.GetResponse<ArticlesResponseDto, NoArticlesFoundForAuthor>(new ArticlesByIdAuthorRequestDto
             {
                 AuthorGuid = authorGuid
             });
-            var model = _mapper.Map<IEnumerable<ArticleViewModelApi>>(articles.Message.ArticlesDto);
-            return Ok(model);
+            
+            if (statusResponse.IsCompletedSuccessfully)
+            {
+                var articles = await statusResponse;
+                var models = _mapper.Map<IEnumerable<ArticleViewModelApi>>(articles.Message.ArticlesDto);
+                return Ok(models);
+            }
+            else
+            {
+                var notFound = await notFoundResponse;
+                return Ok(notFound.Message);
+            }
         }
     }
 }
