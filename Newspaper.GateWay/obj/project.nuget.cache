@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "acgos4pISWWWEYQyB+eyEFREDzrSb808X+/S+fVz7WnFdXR9wQMtiZT8srsmyarROF0/oCAuxrEbHikjIf+91w==",
+  "dgSpecHash": "iAESy12NxtWKYTkVaM00nZOkAuWzbsXjIJr5BxR1r9W2Zdr39QAcTwhEUXrwTh+pu2ScIlQU5qpB1G9mpEVznA==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.contracts\\1.0.4\\newspaper.masstransit.contracts.1.0.4.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\operationresultcore\\2.1.3\\operationresultcore.2.1.3.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

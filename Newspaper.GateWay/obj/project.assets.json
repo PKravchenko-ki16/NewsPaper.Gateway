@@ -489,6 +489,15 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
+      "OperationResultCore/2.1.3": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/Calabonga.OperationResults.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Calabonga.OperationResults.dll": {}
+        }
+      },
       "RabbitMQ.Client/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -2337,6 +2346,21 @@
         "lib/netstandard1.3/Newtonsoft.Json.Bson.xml",
         "newtonsoft.json.bson.1.0.1.nupkg.sha512",
         "newtonsoft.json.bson.nuspec"
+      ]
+    },
+    "OperationResultCore/2.1.3": {
+      "sha512": "WzOx6apbdxY/2nxnmsv2xUaE8K5LVk0qeUCgpiRFNLeJLbuY4ZO/GDTfJcfGJ70cLnTTEdokUipmBbHQknVeYw==",
+      "type": "package",
+      "path": "operationresultcore/2.1.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netcoreapp2.2/Calabonga.OperationResults.dll",
+        "lib/netcoreapp3.1/Calabonga.OperationResults.dll",
+        "lib/netstandard2.1/Calabonga.OperationResults.dll",
+        "logo.png",
+        "operationresultcore.2.1.3.nupkg.sha512",
+        "operationresultcore.nuspec"
       ]
     },
     "RabbitMQ.Client/6.2.1": {
@@ -5818,7 +5842,8 @@
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9",
       "NewsPaper.MassTransit.Configuration >= 1.0.1",
       "NewsPaper.MassTransit.Contracts >= 1.0.4",
-      "Newspaper.GateWay.ViewModels >= 1.0.0"
+      "Newspaper.GateWay.ViewModels >= 1.0.0",
+      "OperationResultCore >= 2.1.3"
     ]
   },
   "packageFolders": {
@@ -5898,6 +5923,10 @@
           "NewsPaper.MassTransit.Contracts": {
             "target": "Package",
             "version": "[1.0.4, )"
+          },
+          "OperationResultCore": {
+            "target": "Package",
+            "version": "[2.1.3, )"
           }
         },
         "imports": [

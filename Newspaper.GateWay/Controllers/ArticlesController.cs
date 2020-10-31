@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using AutoMapper;
+using Calabonga.OperationResults;
 using MassTransit;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -28,23 +29,19 @@ namespace NewsPaper.GateWay.Controllers
         [HttpGet("getarticlesbyauthor")]
         public async Task<IActionResult> GetArticlesByAuthor(Guid authorGuid)
         {
+            var operation = OperationResult.CreateResult<IEnumerable<ArticleViewModelApi>>();
             var (statusResponse, notFoundResponse) =
                 await _requestClient.GetResponse<ArticlesResponseDto, NoArticlesFoundForAuthor>(new ArticlesByIdAuthorRequestDto
             {
                 AuthorGuid = authorGuid
             });
-            
             if (statusResponse.IsCompletedSuccessfully)
             {
-                var articles = await statusResponse;
-                var models = _mapper.Map<IEnumerable<ArticleViewModelApi>>(articles.Message.ArticlesDto);
-                return Ok(models);
+                operation.Result = _mapper.Map<IEnumerable<ArticleViewModelApi>>(statusResponse.Result.Message.ArticlesDto);
+                return Ok(operation);
             }
-            else
-            {
-                var notFound = await notFoundResponse;
-                return Ok(notFound.Message);
-            }
+            operation.AddError(notFoundResponse.Result.Message.MassageException);
+            return Ok(operation);
         }
     }
 }
