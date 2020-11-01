@@ -32,7 +32,7 @@
           "MassTransit.RabbitMQ": "7.0.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.9",
           "NewsPaper.MassTransit.Configuration": "1.0.1",
-          "NewsPaper.MassTransit.Contracts": "1.0.4",
+          "NewsPaper.MassTransit.Contracts": "1.0.5",
           "Newspaper.GateWay.ViewModels": "1.0.0",
           "OperationResultCore": "2.1.3",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -793,11 +793,11 @@
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
-      "NewsPaper.MassTransit.Contracts/1.0.4": {
+      "NewsPaper.MassTransit.Contracts/1.0.5": {
         "runtime": {
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {
-            "assemblyVersion": "1.0.4.0",
-            "fileVersion": "1.0.4.0"
+            "assemblyVersion": "1.0.5.0",
+            "fileVersion": "1.0.5.0"
           }
         },
         "compile": {
@@ -3342,12 +3342,12 @@
       "path": "newspaper.masstransit.configuration/1.0.1",
       "hashPath": "newspaper.masstransit.configuration.1.0.1.nupkg.sha512"
     },
-    "NewsPaper.MassTransit.Contracts/1.0.4": {
+    "NewsPaper.MassTransit.Contracts/1.0.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Cl0atYWCcGtbHEWFcAMg/axpLj8LgDIW1WF9OcrFBc/ft1YZgJ+d9KzynREcPdJ/agRKSN9rPbNBxbab2Bhjyg==",
-      "path": "newspaper.masstransit.contracts/1.0.4",
-      "hashPath": "newspaper.masstransit.contracts.1.0.4.nupkg.sha512"
+      "sha512": "sha512-C9DYY7zuxsUaMYykavGiPP1+Qu03DuGSdze1pGGPhHVgXQxl0zPjoAwHyCNwfspFVbo5v473wsb4u0dd/QO1dg==",
+      "path": "newspaper.masstransit.contracts/1.0.5",
+      "hashPath": "newspaper.masstransit.contracts.1.0.5.nupkg.sha512"
     },
     "Newtonsoft.Json/11.0.2": {
       "type": "package",

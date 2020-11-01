@@ -458,7 +458,7 @@
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Configuration.dll": {}
         }
       },
-      "NewsPaper.MassTransit.Contracts/1.0.4": {
+      "NewsPaper.MassTransit.Contracts/1.0.5": {
         "type": "package",
         "compile": {
           "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll": {}
@@ -2292,14 +2292,14 @@
         "newspaper.masstransit.configuration.nuspec"
       ]
     },
-    "NewsPaper.MassTransit.Contracts/1.0.4": {
-      "sha512": "Cl0atYWCcGtbHEWFcAMg/axpLj8LgDIW1WF9OcrFBc/ft1YZgJ+d9KzynREcPdJ/agRKSN9rPbNBxbab2Bhjyg==",
+    "NewsPaper.MassTransit.Contracts/1.0.5": {
+      "sha512": "C9DYY7zuxsUaMYykavGiPP1+Qu03DuGSdze1pGGPhHVgXQxl0zPjoAwHyCNwfspFVbo5v473wsb4u0dd/QO1dg==",
       "type": "package",
-      "path": "newspaper.masstransit.contracts/1.0.4",
+      "path": "newspaper.masstransit.contracts/1.0.5",
       "files": [
         ".nupkg.metadata",
         "lib/netcoreapp3.1/NewsPaper.MassTransit.Contracts.dll",
-        "newspaper.masstransit.contracts.1.0.4.nupkg.sha512",
+        "newspaper.masstransit.contracts.1.0.5.nupkg.sha512",
         "newspaper.masstransit.contracts.nuspec"
       ]
     },
@@ -5841,7 +5841,7 @@
       "MassTransit.RabbitMQ >= 7.0.6",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.9",
       "NewsPaper.MassTransit.Configuration >= 1.0.1",
-      "NewsPaper.MassTransit.Contracts >= 1.0.4",
+      "NewsPaper.MassTransit.Contracts >= 1.0.5",
       "Newspaper.GateWay.ViewModels >= 1.0.0",
       "OperationResultCore >= 2.1.3"
     ]
@@ -5922,7 +5922,7 @@
           },
           "NewsPaper.MassTransit.Contracts": {
             "target": "Package",
-            "version": "[1.0.4, )"
+            "version": "[1.0.5, )"
           },
           "OperationResultCore": {
             "target": "Package",
