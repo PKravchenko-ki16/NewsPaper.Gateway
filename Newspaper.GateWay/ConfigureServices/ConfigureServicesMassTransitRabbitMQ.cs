@@ -1,11 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using NewsPaper.MassTransit.Configuration;
-using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Author;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Editor;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.User;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
-namespace NewsPaper.Gateway.ConfigureServices
+namespace NewsPaper.GateWay.ConfigureServices
 {
     public class ConfigureServicesMassTransitRabbitMq
     {
@@ -18,7 +20,24 @@ namespace NewsPaper.Gateway.ConfigureServices
                 ServiceName = "Gateway",
                 Configurator = busMassTransit =>
                 {
-                    busMassTransit.AddRequestClient<ArticlesByIdAuthorRequestDto>(); 
+                    busMassTransit.AddRequestClient<ArticlesByIdAuthorRequestDto>();
+                    busMassTransit.AddRequestClient<ArticleByIdRequestDto>();
+                    busMassTransit.AddRequestClient<ArticlesRequestDto>();
+
+                    busMassTransit.AddRequestClient<AuthorRequestDto>();
+                    busMassTransit.AddRequestClient<AuthorsRequestDto>();
+                    busMassTransit.AddRequestClient<GuidAuthorRequestDto>();
+                    busMassTransit.AddRequestClient<NikeNameAuthorRequestDto>();
+
+                    busMassTransit.AddRequestClient<EditorRequestDto>();
+                    busMassTransit.AddRequestClient<EditorsRequestDto>();
+                    busMassTransit.AddRequestClient<GuidEditorRequestDto>();
+                    busMassTransit.AddRequestClient<NikeNameEditorRequestDto>();
+
+                    busMassTransit.AddRequestClient<UserRequestDto>();
+                    busMassTransit.AddRequestClient<UsersRequestDto>();
+                    busMassTransit.AddRequestClient<GuidUserRequestDto>();
+                    busMassTransit.AddRequestClient<NikeNameUserRequestDto>();
                 }
             });
         }

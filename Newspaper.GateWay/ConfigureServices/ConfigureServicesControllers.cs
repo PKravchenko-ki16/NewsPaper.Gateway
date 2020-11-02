@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 
-namespace NewsPaper.Gateway.ConfigureServices
+namespace NewsPaper.GateWay.ConfigureServices
 {
     public class ConfigureServicesControllers
     {

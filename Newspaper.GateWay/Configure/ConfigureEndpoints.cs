@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Builder;
 
-namespace NewsPaper.Gateway.Configure
+namespace NewsPaper.GateWay.Configure
 {
     public class ConfigureEndpoints
     {

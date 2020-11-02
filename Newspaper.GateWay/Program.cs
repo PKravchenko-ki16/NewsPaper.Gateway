@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace NewsPaper.Gateway
+namespace NewsPaper.GateWay
 {
     public class Program
     {

@@ -1,6 +1,6 @@
 ﻿using AutoMapper;
 
-namespace NewsPaper.Gateway.Mappings.Base
+namespace NewsPaper.GateWay.Mappings.Base
 {
     public abstract class MapperConfigurationBase : Profile, IAutoMapper { }
 }

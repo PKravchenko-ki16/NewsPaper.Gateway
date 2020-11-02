@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace NewsPaper.Gateway.Configure
+namespace NewsPaper.GateWay.Configure
 {
     public class ConfigureCommon
     {

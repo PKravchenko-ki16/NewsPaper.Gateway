@@ -2,10 +2,10 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NewsPaper.Gateway.Configure;
-using NewsPaper.Gateway.ConfigureServices;
+using NewsPaper.GateWay.Configure;
+using NewsPaper.GateWay.ConfigureServices;
 
-namespace NewsPaper.Gateway
+namespace NewsPaper.GateWay
 {
     public class Startup
     {

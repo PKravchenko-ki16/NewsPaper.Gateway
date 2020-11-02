@@ -14,7 +14,6 @@ G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netc
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.GateWay.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.GateWay.pdb
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.GateWay.Views.dll
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\NewsPaper.GateWay.Views.pdb
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
@@ -23,16 +22,6 @@ G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netc
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.RazorAssemblyInfo.cache
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.RazorAssemblyInfo.cs
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.TagHelpers.input.cache
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.TagHelpers.output.cache
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.RazorCoreGenerate.cache
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Menu.cshtml.g.cs
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\Razor\Views\Site\Index.cshtml.g.cs
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.RazorTargetAssemblyInfo.cs
-G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.Views.pdb
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.csproj.CopyComplete
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.dll
 G:\Repo\NewsPaperMicroservice\Newspaper.GateWay\Newspaper.GateWay\obj\Debug\netcoreapp3.1\NewsPaper.GateWay.pdb

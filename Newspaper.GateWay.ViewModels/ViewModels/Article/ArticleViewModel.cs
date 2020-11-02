@@ -1,9 +1,9 @@
 ﻿using System;
 using Newspaper.GateWay.ViewModels.ViewModels.Base;
 
-namespace Newspaper.GateWay.ViewModels.ViewModels
+namespace Newspaper.GateWay.ViewModels.ViewModels.Article
 {
-    public class ArticleViewModelApi : ViewModelBase
+    public class ArticleViewModel : ViewModelBase
     {
         public string Title { get; set; }
 

@@ -1,8 +1,7 @@
 ﻿using AutoMapper;
-using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace NewsPaper.Gateway.ConfigureServices
+namespace NewsPaper.GateWay.ConfigureServices
 {
     public class ConfigureServicesBase
     {

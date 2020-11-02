@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 
-namespace NewsPaper.Gateway.ConfigureServices
+namespace NewsPaper.GateWay.ConfigureServices
 {
     public class ConfigureServicesAuthentication
     {
