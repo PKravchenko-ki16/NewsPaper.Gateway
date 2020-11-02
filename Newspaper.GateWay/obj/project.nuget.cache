@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "DWNUbmJ/mNtUzqk0QubI0xi7bNBbmwTRgLTWqupe85LnklQhV2Lr4AbKc70Vytm4VNKcVTpVRygSeIQoueC/3w==",
+  "dgSpecHash": "ASi67TVcJ8EE2P/ij50RmrfjZfvQ48n7XgRysDCnfmt4r2/5htj7JzF4kV396WRpB8GF7RG/NykIjbVQu+p5Dw==",
   "success": true,
   "projectFilePath": "G:\\Repo\\NewsPaperMicroservice\\Newspaper.GateWay\\Newspaper.GateWay\\NewsPaper.GateWay.csproj",
   "expectedPackageFiles": [
@@ -38,7 +38,7 @@
     "C:\\Users\\KrokoR\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newid\\3.0.2\\newid.3.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.configuration\\1.0.1\\newspaper.masstransit.configuration.1.0.1.nupkg.sha512",
-    "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.contracts\\1.0.5\\newspaper.masstransit.contracts.1.0.5.nupkg.sha512",
+    "C:\\Users\\KrokoR\\.nuget\\packages\\newspaper.masstransit.contracts\\1.1.0\\newspaper.masstransit.contracts.1.1.0.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json\\11.0.2\\newtonsoft.json.11.0.2.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\KrokoR\\.nuget\\packages\\operationresultcore\\2.1.3\\operationresultcore.2.1.3.nupkg.sha512",

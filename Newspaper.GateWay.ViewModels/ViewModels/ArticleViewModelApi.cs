@@ -17,7 +17,7 @@ namespace Newspaper.GateWay.ViewModels.ViewModels
 
         public string NikeNameAuthor { get; set; }
 
-        //public string EditorNikeName { get; set; }
+        public string EditorNikeName { get; set; }
 
         public DateTime DateOfRevision { get; set; }
     }
