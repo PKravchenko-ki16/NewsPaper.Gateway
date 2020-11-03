@@ -5,6 +5,8 @@ namespace Newspaper.GateWay.ViewModels.ViewModels.Article
 {
     public class ArticleViewModel : ViewModelBase
     {
+        public override Guid Id { get; set; }
+
         public string Title { get; set; }
 
         public string Description { get; set; }
@@ -17,7 +19,7 @@ namespace Newspaper.GateWay.ViewModels.ViewModels.Article
 
         public string NikeNameAuthor { get; set; }
 
-        public string EditorNikeName { get; set; }
+        public string NikeNameEditor { get; set; }
 
         public DateTime DateOfRevision { get; set; }
     }

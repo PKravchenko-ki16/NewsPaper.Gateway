@@ -32,8 +32,8 @@ namespace NewsPaper.GateWay.Controllers
         }
 
         [Authorize]
-        [HttpGet("getarticlesbyauthor")]
-        public async Task<IActionResult> GetArticlesByAuthor(Guid authorGuid)
+        [HttpGet("getarticlesbyidauthor")]
+        public async Task<IActionResult> GetArticlesByIdAuthor(Guid authorGuid)
         {
             var operation = OperationResult.CreateResult<IEnumerable<ArticleViewModel>>();
             var (statusResponse, notFoundResponse) =
