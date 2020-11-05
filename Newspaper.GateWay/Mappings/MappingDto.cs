@@ -10,9 +10,9 @@ using NewsPaper.MassTransit.Contracts.DTO.Models.User;
 
 namespace NewsPaper.GateWay.Mappings
 {
-    public class MappingArticlesDto : MapperConfigurationBase
+    public class MappingDto : MapperConfigurationBase
     {
-        public MappingArticlesDto()
+        public MappingDto()
         {
             CreateMap<ArticleDto, ArticleViewModel>();
 
