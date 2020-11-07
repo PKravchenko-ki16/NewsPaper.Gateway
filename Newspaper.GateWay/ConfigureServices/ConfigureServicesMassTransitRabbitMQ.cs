@@ -23,6 +23,8 @@ namespace NewsPaper.GateWay.ConfigureServices
                     busMassTransit.AddRequestClient<ArticlesByIdAuthorRequestDto>();
                     busMassTransit.AddRequestClient<ArticleByIdRequestDto>();
                     busMassTransit.AddRequestClient<ArticlesRequestDto>();
+                    busMassTransit.AddRequestClient<ArticleCreateRequestDto>();
+                    busMassTransit.AddRequestClient<ArticleGoArchiveRequestDto>();
 
                     busMassTransit.AddRequestClient<AuthorRequestDto>();
                     busMassTransit.AddRequestClient<AuthorsRequestDto>();

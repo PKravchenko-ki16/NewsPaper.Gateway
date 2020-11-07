@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newspaper.GateWay.ViewModels.ViewModels.Article;
 using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Models.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
 using Newtonsoft.Json;
@@ -37,7 +38,7 @@ namespace NewsPaper.GateWay.Controllers
         {
             var operation = OperationResult.CreateResult<IEnumerable<ArticleViewModel>>();
             var (statusResponse, notFoundResponse) =
-                await _requestClientArticlesByIdAuthor.GetResponse<ArticlesByIdAuthorResponseDto, NoArticlesFoundForAuthor>(new ArticlesByIdAuthorRequestDto //use Ex NoArticlesFound
+                await _requestClientArticlesByIdAuthor.GetResponse<ArticlesByIdAuthorResponseDto, NoArticlesFound>(new ArticlesByIdAuthorRequestDto
                 {
                     AuthorGuid = authorGuid
                 });
@@ -58,7 +59,7 @@ namespace NewsPaper.GateWay.Controllers
         {
             var operation = OperationResult.CreateResult<ArticleViewModel>();
             var (statusResponse, notFoundResponse) =
-                await _requestClientArticleById.GetResponse<ArticleResponseDto, NoArticlesFoundForAuthor>(new ArticleByIdRequestDto //use Ex NoArticlesFound
+                await _requestClientArticleById.GetResponse<ArticleResponseDto, NoArticlesFound>(new ArticleByIdRequestDto
                 {
                     ArticleGuid = articleGuid
                 });
@@ -79,13 +80,56 @@ namespace NewsPaper.GateWay.Controllers
         {
             var operation = OperationResult.CreateResult<IEnumerable<ArticleViewModel>>();
             var (statusResponse, notFoundResponse) =
-                await _requestClientArticles.GetResponse<ArticlesResponseDto, NoArticlesFoundForAuthor>(new ArticlesRequestDto()); //use Ex NoArticlesFound
+                await _requestClientArticles.GetResponse<ArticlesResponseDto, NoArticlesFound>(new ArticlesRequestDto());
             if (statusResponse.IsCompletedSuccessfully)
             {
                 operation.Result = _mapper.Map<IEnumerable<ArticleViewModel>>(statusResponse.Result.Message.ArticlesDto);
                 return Ok(operation);
             }
             operation.AddError(new Exception(notFoundResponse.Result.Message.MassageException));
+            var output = JsonConvert.SerializeObject(operation);
+
+            return Ok(output);
+        }
+
+        [Authorize]
+        [HttpPost("createarticle")]
+        public async Task<IActionResult> CreateArticle(ArticleViewModel articleViewModel)
+        {
+            var operation = OperationResult.CreateResult<Guid>();
+            var articleDto = _mapper.Map<ArticleDto>(articleViewModel);
+            var (statusResponse, failedToCreateArticleResponse) =
+                await _requestClientArticles.GetResponse<ArticleCreateResponseDto, FailedToCreateArticle>(new ArticleCreateRequestDto
+                {
+                    Article = articleDto
+                });
+            if (statusResponse.IsCompletedSuccessfully)
+            {
+                operation.Result = statusResponse.Result.Message.ArticleGuid;
+                return Ok(operation);
+            }
+            operation.AddError(new Exception(failedToCreateArticleResponse.Result.Message.MassageException));
+            var output = JsonConvert.SerializeObject(operation);
+
+            return Ok(output);
+        }
+
+        [Authorize]
+        [HttpGet("goarchivearticle")]
+        public async Task<IActionResult> GoArchiveArticle(Guid articleGuid)
+        {
+            var operation = OperationResult.CreateResult<Guid>();
+            var (statusResponse, failedTransferToArchiveResponse) =
+                await _requestClientArticles.GetResponse<ArticleGoArchiveResponseDto, FailedTransferToArchive>(new ArticleGoArchiveRequestDto
+                {
+                    ArticleGuid = articleGuid
+                });
+            if (statusResponse.IsCompletedSuccessfully)
+            {
+                operation.Result = statusResponse.Result.Message.ArticleGuid;
+                return Ok(operation);
+            }
+            operation.AddError(new Exception(failedTransferToArchiveResponse.Result.Message.MassageException));
             var output = JsonConvert.SerializeObject(operation);
 
             return Ok(output);
