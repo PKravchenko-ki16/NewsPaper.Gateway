@@ -15,7 +15,6 @@ namespace NewsPaper.GateWay.Mappings
         public MappingDto()
         {
             CreateMap<ArticleDto, ArticleViewModel>();
-            CreateMap<ArticleViewModel, ArticleDto>();
 
             CreateMap<AuthorDto, AuthorViewModel>();
 

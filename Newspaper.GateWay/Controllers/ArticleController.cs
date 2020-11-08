@@ -22,14 +22,18 @@ namespace NewsPaper.GateWay.Controllers
         private readonly IRequestClient<ArticlesByIdAuthorRequestDto> _requestClientArticlesByIdAuthor;
         private readonly IRequestClient<ArticleByIdRequestDto> _requestClientArticleById;
         private readonly IRequestClient<ArticlesRequestDto> _requestClientArticles;
+        private readonly IRequestClient<ArticleCreateRequestDto> _requestClientArticleCreate;
+        private readonly IRequestClient<ArticleGoArchiveRequestDto> _requestClientArticleGoArchive;
 
         private readonly IMapper _mapper;
-        public ArticleController(IMapper mapper, IRequestClient<ArticlesByIdAuthorRequestDto> requestClientArticlesByIdAuthor, IRequestClient<ArticleByIdRequestDto> requestClientArticleById, IRequestClient<ArticlesRequestDto> requestClientArticles)
+        public ArticleController(IMapper mapper, IRequestClient<ArticlesByIdAuthorRequestDto> requestClientArticlesByIdAuthor, IRequestClient<ArticleByIdRequestDto> requestClientArticleById, IRequestClient<ArticlesRequestDto> requestClientArticles, IRequestClient<ArticleCreateRequestDto> requestClientArticleCreate, IRequestClient<ArticleGoArchiveRequestDto> requestClientArticleGoArchive)
         {
             _mapper = mapper;
             _requestClientArticlesByIdAuthor = requestClientArticlesByIdAuthor;
             _requestClientArticleById = requestClientArticleById;
             _requestClientArticles = requestClientArticles;
+            _requestClientArticleCreate = requestClientArticleCreate;
+            _requestClientArticleGoArchive = requestClientArticleGoArchive;
         }
 
         [Authorize]
@@ -99,7 +103,7 @@ namespace NewsPaper.GateWay.Controllers
             var operation = OperationResult.CreateResult<Guid>();
             var articleDto = _mapper.Map<ArticleDto>(articleViewModel);
             var (statusResponse, failedToCreateArticleResponse) =
-                await _requestClientArticles.GetResponse<ArticleCreateResponseDto, FailedToCreateArticle>(new ArticleCreateRequestDto
+                await _requestClientArticleCreate.GetResponse<ArticleCreateResponseDto, FailedToCreateArticle>(new ArticleCreateRequestDto
                 {
                     Article = articleDto
                 });
@@ -120,7 +124,7 @@ namespace NewsPaper.GateWay.Controllers
         {
             var operation = OperationResult.CreateResult<Guid>();
             var (statusResponse, failedTransferToArchiveResponse) =
-                await _requestClientArticles.GetResponse<ArticleGoArchiveResponseDto, FailedTransferToArchive>(new ArticleGoArchiveRequestDto
+                await _requestClientArticleGoArchive.GetResponse<ArticleGoArchiveResponseDto, FailedTransferToArchive>(new ArticleGoArchiveRequestDto
                 {
                     ArticleGuid = articleGuid
                 });
