@@ -4,7 +4,9 @@ using NewsPaper.MassTransit.Configuration;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Author;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Editor;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Operation;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.User;
+using NewsPaper.MassTransit.Contracts.DTO.Responses.Operation;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
 namespace NewsPaper.GateWay.ConfigureServices
@@ -40,6 +42,8 @@ namespace NewsPaper.GateWay.ConfigureServices
                     busMassTransit.AddRequestClient<UsersRequestDto>();
                     busMassTransit.AddRequestClient<GuidUserRequestDto>();
                     busMassTransit.AddRequestClient<NikeNameUserRequestDto>();
+
+                    busMassTransit.AddRequestClient<AccountsForCreateArticleRequestDto>();
                 }
             });
         }

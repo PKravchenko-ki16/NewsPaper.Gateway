@@ -8,9 +8,12 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newspaper.GateWay.ViewModels.ViewModels.Article;
 using NewsPaper.MassTransit.Contracts.DTO.Exception.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Exception.Operation;
 using NewsPaper.MassTransit.Contracts.DTO.Models.Articles;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Requests.Operation;
 using NewsPaper.MassTransit.Contracts.DTO.Responses.Articles;
+using NewsPaper.MassTransit.Contracts.DTO.Responses.Operation;
 using Newtonsoft.Json;
 
 namespace NewsPaper.GateWay.Controllers
@@ -24,9 +27,10 @@ namespace NewsPaper.GateWay.Controllers
         private readonly IRequestClient<ArticlesRequestDto> _requestClientArticles;
         private readonly IRequestClient<ArticleCreateRequestDto> _requestClientArticleCreate;
         private readonly IRequestClient<ArticleGoArchiveRequestDto> _requestClientArticleGoArchive;
+        private readonly IRequestClient<AccountsForCreateArticleRequestDto> _requestAccountsForCreateArticle;
 
         private readonly IMapper _mapper;
-        public ArticleController(IMapper mapper, IRequestClient<ArticlesByIdAuthorRequestDto> requestClientArticlesByIdAuthor, IRequestClient<ArticleByIdRequestDto> requestClientArticleById, IRequestClient<ArticlesRequestDto> requestClientArticles, IRequestClient<ArticleCreateRequestDto> requestClientArticleCreate, IRequestClient<ArticleGoArchiveRequestDto> requestClientArticleGoArchive)
+        public ArticleController(IMapper mapper, IRequestClient<ArticlesByIdAuthorRequestDto> requestClientArticlesByIdAuthor, IRequestClient<ArticleByIdRequestDto> requestClientArticleById, IRequestClient<ArticlesRequestDto> requestClientArticles, IRequestClient<ArticleCreateRequestDto> requestClientArticleCreate, IRequestClient<ArticleGoArchiveRequestDto> requestClientArticleGoArchive, IRequestClient<AccountsForCreateArticleRequestDto> requestAccountsForCreateArticle)
         {
             _mapper = mapper;
             _requestClientArticlesByIdAuthor = requestClientArticlesByIdAuthor;
@@ -34,6 +38,7 @@ namespace NewsPaper.GateWay.Controllers
             _requestClientArticles = requestClientArticles;
             _requestClientArticleCreate = requestClientArticleCreate;
             _requestClientArticleGoArchive = requestClientArticleGoArchive;
+            _requestAccountsForCreateArticle = requestAccountsForCreateArticle;
         }
 
         [Authorize]
@@ -100,7 +105,25 @@ namespace NewsPaper.GateWay.Controllers
         [HttpPost("createarticle")]
         public async Task<IActionResult> CreateArticle(ArticleViewModel articleViewModel)
         {
-            var operation = OperationResult.CreateResult<Guid>();
+            var operation = OperationResult.CreateResult<ArticleViewModel>();
+            var (statusResponseAccounts, failedGetAccountsToCreateArticleResponse) =
+                await _requestAccountsForCreateArticle.GetResponse<AccountsForCreateArticleResponseDto, FailedGetAccountsToCreateArticle>(new AccountsForCreateArticleRequestDto
+                {
+                    AuthorGuid = articleViewModel.AuthorGuid
+                });
+            if (statusResponseAccounts.IsCompletedSuccessfully)
+            {
+                articleViewModel.NikeNameAuthor = statusResponseAccounts.Result.Message.Author.NikeName;
+                articleViewModel.EditorGuid = statusResponseAccounts.Result.Message.Editor.Id;
+                articleViewModel.NikeNameEditor = statusResponseAccounts.Result.Message.Editor.NikeName;
+                articleViewModel.DateOfWriting = DateTime.Now;
+            }
+            else
+            {
+                operation.AddError(new Exception(failedGetAccountsToCreateArticleResponse.Result.Message.MassageException));
+                var output = JsonConvert.SerializeObject(operation);
+                return Ok(output);
+            }
             var articleDto = _mapper.Map<ArticleDto>(articleViewModel);
             var (statusResponse, failedToCreateArticleResponse) =
                 await _requestClientArticleCreate.GetResponse<ArticleCreateResponseDto, FailedToCreateArticle>(new ArticleCreateRequestDto
@@ -109,13 +132,15 @@ namespace NewsPaper.GateWay.Controllers
                 });
             if (statusResponse.IsCompletedSuccessfully)
             {
-                operation.Result = statusResponse.Result.Message.ArticleGuid;
+                operation.Result = _mapper.Map<ArticleViewModel>(statusResponse.Result.Message.Article);
                 return Ok(operation);
             }
-            operation.AddError(new Exception(failedToCreateArticleResponse.Result.Message.MassageException));
-            var output = JsonConvert.SerializeObject(operation);
-
-            return Ok(output);
+            else
+            {
+                operation.AddError(new Exception(failedToCreateArticleResponse.Result.Message.MassageException));
+                var output = JsonConvert.SerializeObject(operation);
+                return Ok(output);
+            }
         }
 
         [Authorize]
@@ -130,7 +155,6 @@ namespace NewsPaper.GateWay.Controllers
                 });
             if (statusResponse.IsCompletedSuccessfully)
             {
-                operation.Result = statusResponse.Result.Message.ArticleGuid;
                 return Ok(operation);
             }
             operation.AddError(new Exception(failedTransferToArchiveResponse.Result.Message.MassageException));
