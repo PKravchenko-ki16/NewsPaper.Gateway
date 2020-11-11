@@ -6,7 +6,6 @@ using NewsPaper.MassTransit.Contracts.DTO.Requests.Author;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Editor;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.Operation;
 using NewsPaper.MassTransit.Contracts.DTO.Requests.User;
-using NewsPaper.MassTransit.Contracts.DTO.Responses.Operation;
 using ConfigureServicesMassTransit = NewsPaper.MassTransit.Configuration.ConfigureServicesMassTransit;
 
 namespace NewsPaper.GateWay.ConfigureServices

@@ -109,7 +109,7 @@ namespace NewsPaper.GateWay.Controllers
             var (statusResponseAccounts, failedGetAccountsToCreateArticleResponse) =
                 await _requestAccountsForCreateArticle.GetResponse<AccountsForCreateArticleResponseDto, FailedGetAccountsToCreateArticle>(new AccountsForCreateArticleRequestDto
                 {
-                    AuthorGuid = articleViewModel.AuthorGuid
+                    AuthorIdentityId = articleViewModel.AuthorGuid
                 });
             if (statusResponseAccounts.IsCompletedSuccessfully)
             {
